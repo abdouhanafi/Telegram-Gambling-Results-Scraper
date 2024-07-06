@@ -19,7 +19,7 @@ This project was developed as part of an academic endeavor at Aalto University i
 ### Installation
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/telegram-gambling-results-scraper.git
+   git clone https://github.com/abdouhanafi/telegram-gambling-results-scraper.git
    ```
 2. **Navigate to the project directory:**
    ```bash
