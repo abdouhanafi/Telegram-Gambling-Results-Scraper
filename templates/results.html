@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        img {
+            max-width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Search Results for "{{ query }}"</h1>
+    {% if result_count > 0 %}
+    <table>
+        <thead>
+            <tr>
+                {% for col in results[0].keys() %}
+                    <th>{{ col }}</th>
+                {% endfor %}
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for result in results %}
+                <tr>
+                    {% for value in result.values() %}
+                        <td>{{ value }}</td>
+                    {% endfor %}
+                    <td>
+                        {% if result['Image Path'] and result['Image Path']|string != 'nan' %}
+                            <img src="{{ url_for('download_file', filename=result['Image Path'].replace('/images/','')) }}" alt="Image">
+                        {% else %}
+                            No Image
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+        <p>No results found for "{{ query }}".</p>
+    {% endif %}
+    <a href="/">Back to search</a>
+</body>
+</html>
