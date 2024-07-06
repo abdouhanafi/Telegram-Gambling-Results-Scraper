@@ -1,6 +1,3 @@
-### Project Name
-**Telegram Gambling Results Scraper**
-
 ### Description
 The Telegram Gambling Results Scraper is a bot developed to collect and analyze gambling results for Champions League and Europa League matches shared in various Telegram channels. This bot efficiently scrapes images and relevant data, storing them in an Excel file for further analysis. The project aims to support educational and research purposes, offering insights into gambling trends and behaviors in sports betting.
 
