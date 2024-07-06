@@ -7,9 +7,9 @@ from telethon.tl.functions.channels import JoinChannelRequest
 from telethon.tl.types import MessageMediaPhoto
 
 # Replace these with your own values
-api_id = '24167225'
-api_hash = '2bc9300d5f9215a133320bd000362cac'
-phone_number = '+212610622143'
+api_id = 'XXXXXX'
+api_hash = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+phone_number = '+XXXXXXXXXXXXXXXXXXXXX'
 
 # List of target channels
 target_channels = ['predictions_1xbet']    # Add the usernames of target channels
